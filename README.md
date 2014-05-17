@@ -1,4 +1,5 @@
 sudestada-gtk3-theme 
+====================
 .flag {
 	width: 16px;
 	height: 11px;
@@ -7,6 +8,5 @@ sudestada-gtk3-theme
 
 .flag.flag-ar {background-position: -16px 0}
 
-====================
 
 A clean minimalistic gtk3 and gtk2 theme
