@@ -1,0 +1,451 @@
+
+/************
+ * Nautilus *
+ ************/
+
+
+NautilusWindow * {
+    -GtkPaned-handle-size: 1;
+}
+
+/* desktop mode */
+.nautilus-desktop.nautilus-canvas-item {
+    border-radius: 3px;
+    margin: 4px;
+
+    box-shadow: 0 3px 3px 1px alpha(@dark_shadow, 0.1);
+
+    color: @dark_fg_color;
+    text-shadow: 0 -1px alpha(@dark_shadow, 0.4);
+}
+
+.nautilus-desktop.nautilus-canvas-item:active {
+    background-color: alpha(@theme_bg_color, 0.8);
+    background-image: none;
+    color: @dark_selected_fg_color;
+    border-width: 1px;
+}
+
+.nautilus-desktop.nautilus-canvas-item:selected {
+    background-color: alpha(@theme_selected_bg_color, 0.8);
+    background-image: none;
+    color: @dark_selected_fg_color;
+}
+
+.nautilus-desktop.nautilus-canvas-item:active,
+.nautilus-desktop.nautilus-canvas-item:prelight,
+.nautilus-desktop.nautilus-canvas-item:selected {
+    text-shadow: 0 -1px alpha(@dark_shadow, 0.4);
+}
+
+
+
+
+/* browser window */
+NautilusWindow .sidebar{
+  padding: 4px 0px 4px 0px;
+  border-width: 0px;
+  box-shadow: inset 0 0px alpha(@theme_selected_bg_color, 0.0);
+
+  }
+
+
+
+NautilusWindow .sidebar .scrollbar.trough.vertical {
+    background-color: transparent;
+    border-left-color: transparent;
+    color: @theme_base_color
+
+    /*box-shadow: inset 1px 0 alpha(@light_shadow, 0.2);*/
+}
+
+NautilusTrashBar,
+NautilusXContentBar,
+NautilusSearchBar,
+NautilusQueryEditor {
+    background-color: @theme_bg_color;
+
+    border-radius: 0;
+    padding: 0;
+}
+
+NautilusTrashBar.info,
+NautilusXContentBar.info,
+NautilusSearchBar.info,
+NautilusQueryEditor.info {
+    background-image: -gtk-gradient(linear, left top, left bottom,
+                                     from (shade(@theme_bg_color, 0.96)),
+                                     to (shade(@theme_bg_color, 1.00)));
+
+    border-top-color: alpha(@light_shadow, 0.8);
+    border-bottom-color: alpha(@light_shadow, 0.8);
+    border-style: solid;
+    border-radius: 0;
+    border-width: 1px 0 0 0;
+
+    text-shadow: 0 1px @light_shadow;
+
+    box-shadow: inset 0 1px alpha(@dark_shadow, 0.2);
+}
+
+NautilusView .frame,
+NautilusNotebook .notebook,
+NautilusNotebook .frame {
+    background-color: @theme_bg_color;
+    border-width: 0;
+}
+
+NautilusNotebook .view .frame,
+NautilusWindow .view .frame {
+    border-radius: 0;
+}
+
+NautilusNotebook .view,
+NautilusWindow .view {
+    background-color: @theme_bg_color;
+
+    border-radius: 3px;
+}
+
+
+NautilusQueryEditor .toolbar {
+    padding-top: 3px;
+    padding-bottom: 2px;
+  }
+
+NautilusNotebook column-header .button,
+NautilusNotebook column-header .button:active,
+NautilusNotebook column-header .button:hover,
+NautilusNotebook column-header .button:hover:active,
+NautilusWindow column-header .button,
+NautilusWindow column-header .button:active,
+NautilusWindow column-header .button:hover,
+NautilusWindow column-header .button:hover:active {
+    box-shadow: inset 1px 0 alpha(@light_shadow, 0.4),
+                inset 0 1px alpha(@light_shadow, 0.6),
+                inset -1px 0 alpha(@light_shadow, 0.4),
+    inset 0 -1px alpha(@light_shadow, 0.6);
+    border-radius:0;
+}
+
+NautilusNotebook .notebook tab,
+NautilusNotebook .notebook tab GtkLabel {
+    padding: 1px;
+}
+
+NautilusNotebook .notebook tab:active {
+    background-image: -gtk-gradient( linear, left top, left bottom,
+        from (shade(@theme_bg_color, 0.99)),
+  color-stop (0.6, shade(@theme_bg_color, 0.99)),
+        to (shade(@theme_bg_color, 1.01)));
+}
+
+NautilusWindow .scrollbar.trough.vertical,
+NautilusWindow .notebook .scrollbar.trough.vertical,
+NautilusView .scrollbar.trough.vertical,
+NautilusNotebook .scrollbar.trough.vertical {
+    background-color: @theme_bg_color;
+    border-left-color: alpha(@dark_shadow, 0.0);
+    box-shadow: inset 1px 0 alpha(@light_shadow, 0.0);
+}
+
+NautilusWindow .titlebar,
+NautilusWindow .titlebar:backdrop {
+    /* border-bottom-color: shade(@theme_bg_color, 0.88); */
+/*fix de backdrop de la linea divisoria entre la headbar y la ventana*/
+    padding-top: 9px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-bottom: 3px;
+}
+
+NautilusToolbar .arrow {
+    -GtkArrow-arrow-scaling: 1.0;
+}
+
+NautilusToolbar .button,
+NautilusQueryEditor .button {
+
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+    color: @theme_fg_color;
+
+    text-shadow: 0 1px @hilight_shadow;
+    icon-shadow: none;
+    box-shadow: none;
+}
+
+NautilusToolbar .button:active,
+NautilusToolbar .button:active:focus,
+NautilusToolbar .button:focus,
+NautilusToolbar .raised .button:active,
+NautilusToolbar .raised .button:active:focus,
+NautilusToolbar .raised .button:focus,
+NautilusQueryEditor .button:active,
+NautilusQueryEditor .button:active:focus,
+NautilusQueryEditor .button:focus,
+NautilusQueryEditor .raised .button:active,
+NautilusQueryEditor .raised .button:active:focus,
+NautilusQueryEditor .raised .button:focus {
+    color: @theme_selected_fg_color;
+
+    background-image: -gtk-gradient( linear, left top, right top,
+
+        from (shade(@theme_bg_color, 0.98)), /*boton de cambiar vistas en nautilus*/
+  color-stop (0.6, shade(@theme_bg_color, 0.98)),
+        to (shade(@theme_bg_color, 0.97)));
+
+    border-radius: 9px 9px 9px 9px ;
+
+    border-top-color: alpha(@light_shadow, 0.4);
+    border-right-color: alpha(@light_shadow, 0.2);
+    border-bottom-color: alpha(@dark_shadow, 0.1);
+    border-left-color: alpha(@light_shadow, 0.2);
+    border-style: solid;
+
+    box-shadow: inset 1px 0 alpha(@theme_selected_bg_color, 0.4),
+                inset 0 1px shade(@theme_selected_bg_color, 0.9),
+                inset -1px 0 alpha(@theme_selected_bg_color, 0.4),
+                inset 0 -1px transparent;
+}
+
+NautilusToolbar .button:active:hover,
+NautilusToolbar .button:active:focus:hover,
+NautilusToolbar .button:focus:hover,
+NautilusToolbar .raised .button:active:hover,
+NautilusToolbar .raised .button:active:focus:hover,
+NautilusToolbar .raised .button:focus:hover,
+NautilusQueryEditor .button:active:hover,
+NautilusQueryEditor .button:active:focus:hover,
+NautilusQueryEditor .button:focus:hover,
+NautilusQueryEditor .raised .button:active:hover,
+NautilusQueryEditor .raised .button:active:focus:hover,
+NautilusQueryEditor .raised .button:focus:hover {
+
+    background-image: -gtk-gradient( linear, left top, right top,
+
+        from (shade(@theme_bg_color, 0.98)),
+  color-stop (0.6, shade(@theme_bg_color, 0.98)),
+        to (shade(@theme_bg_color, 0.97)));
+
+    border-radius: 9px ;
+/*instancia mouse over de los botons de cambio de vista y opciones de nautilus*/
+    border-top-color: alpha(@light_shadow, 0.4);
+    border-right-color: alpha(@light_shadow, 0.2);
+    border-bottom-color: alpha(@dark_shadow, 0.1);
+    border-left-color: alpha(@light_shadow, 0.2);
+    border-style: solid;
+
+    box-shadow: inset 1px 0 alpha(@theme_selected_bg_color, 0.4),
+                inset 0 1px shade(@theme_selected_bg_color, 0.9),
+                inset -1px 0 alpha(@theme_selected_bg_color, 0.4),
+                inset 0 -1px alpha(@theme_selected_bg_color, 0.4);
+}
+
+NautilusToolbar .button:hover,
+NautilusQueryEditor .button:hover {
+    background-color: transparent;
+    background-image: none;
+    border-color: alpha(@theme_selected_bg_color, 0.4);
+    color: @theme_selected_fg_color;
+
+    text-shadow: 0 1px @hilight_shadow;
+    icon-shadow: 0 0 @dark_shadow;
+    box-shadow: none;
+    border-radius: 5px;
+}
+
+NautilusToolbar .button:insensitive,
+NautilusToolbar .button:active *:insensitive,
+NautilusQueryEditor .button:insensitive,
+NautilusQueryEditor .button:active *:insensitive {
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+    color: mix(@theme_fg_color, @theme_bg_color, 0.6);
+
+    text-shadow: 0 1px @light_shadow;
+    icon-shadow: none;
+    box-shadow: none;
+border-radius: 5px;
+}
+
+
+
+
+.toolbar.menubar NautilusPathBar.linked .button *,
+.toolbar.menubar NautilusPathBar .button * {
+  color: shade(@theme_fg_dark_color, 1.00);
+/*padding-bottom:30px*//*forma de los botones y tamaño*/
+    border-radius: 4px;
+    background-color: red;
+}
+
+
+.toolbar.menubar NautilusPathBar.linked .button *:active,
+.toolbar.menubar NautilusPathBar.linked .button *:active:hover {
+  color: shade(@theme_text_dark_color, 0.95);
+  text-shadow: 1px 1px @theme_shadow_dark_color;
+    border-radius: 10px;
+    background-color: red;
+
+}
+
+
+/* Middle toolbar-button */
+.toolbar.menubar NautilusPathBar.linked .button,
+.toolbar.menubar NautilusPathBar.linked .button:hover,
+.toolbar.menubar NautilusPathBar.linked .button:active,
+.toolbar.menubar NautilusPathBar.linked .button:active:hover,
+.toolbar.menubar NautilusPathBar.linked .button:insensitive {
+    border-width: 1px;
+    border-right-width: 0px;
+    border-left-width:  0px;
+    border-radius: 0;
+    padding-left:  6px;
+    padding-right: 6px;
+}
+
+/* Leftmost toolbars-button */
+.toolbar.menubar NautilusPathBar.linked .button:first-child,
+.toolbar.menubar NautilusPathBar.linked .button:hover:first-child,
+.toolbar.menubar NautilusPathBar.linked .button:active:first-child,
+.toolbar.menubar NautilusPathBar.linked .button:active:hover:first-child,
+.toolbar.menubar NautilusPathBar.linked .button:insensitive:first-child {
+    padding-left:  10px;
+    padding-right: 6px;
+    border-width: 1px;
+    border-right-width: 0;
+    border-radius: 5px 0px 5px 0px;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+/* Rightmost toolbar-button */
+.toolbar.menubar NautilusPathBar.linked .button:last-child,
+.toolbar.menubar NautilusPathBar.linked .button:hover:last-child,
+.toolbar.menubar NautilusPathBar.linked .button:active:last-child,
+.toolbar.menubar NautilusPathBar.linked .button:active:hover:last-child,
+.toolbar.menubar NautilusPathBar.linked .button:insensitive:last-child {
+    padding-left:  6px;
+    padding-right: 10px;
+    border-width: 1px;
+    border-left-width: 0px;
+    border-radius: 5px 0px 5px 0px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+
+/* Linked single toolbar-button */
+.toolbar.menubar NautilusPathBar.linked .button:only-child,
+.toolbar.menubar NautilusPathBar.linked .button:hover:only-child,
+.toolbar.menubar NautilusPathBar.linked .button:active:only-child,
+.toolbar.menubar NautilusPathBar.linked .button:active:hover:only-child,
+.toolbar.menubar NautilusPathBar.linked .button:insensitive:only-child {
+    padding-left:  10px;
+    padding-right: 10px;
+    border-width: 1px;
+    border-bottom-left-radius: 6px;
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 6px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nautilus-cluebar-label {
+    color: @theme_text_color;
+    text-shadow: 0 1px @hilight_shadow;
+    font: bold;
+}
+
+NautilusLocationEntry.entry {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+NautilusQueryEditor .button,
+NautilusQueryEditor .button:focus,
+NautilusQueryEditor .button:active,
+NautilusQueryEditor .button:active:focus,
+NautilusSearchBar .entry,
+NautilusSearchBar .entry:focus {
+    border-style: solid;
+    border-width: 1px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+
+
+NautilusQueryEditor .search-bar.toolbar {
+    border-radius: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+NautilusQueryEditor .toolbar {
+    padding-top: 3px;
+    padding-bottom: 2px;
+
+    border-radius: 0;
+    border-width: 1px 0 0 0;
+    border-style: solid;
+}
+
+NautilusQueryEditor .toolbar:nth-child(2),
+NautilusQueryEditor .toolbar:last-child,
+NautilusQueryEditor .primary-toolbar.toolbar:only-child {
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+    color: @theme_fg_color;
+
+    text-shadow: 0 1px @hilight_shadow;
+    icon-shadow: none;
+    box-shadow: none;
+}
+
+NautilusFloatingBar,
+NautilusFloatingBar.button,
+NautilusFloatingBar .button {
+    padding: 3px;
+
+    background-color: @theme_selected_bg_color;
+    background-image: none;
+    color: @theme_text_color;
+    text-shadow: 0 1px @light_shadow;
+
+    border-radius: 3px;
+    border-style: none;
+}
+
+/* inactive pane */
+.nautilus-inactive-pane .view {
+    background-color: shade(@theme_base_color, 0.9);
+}
+
+/* pane separator */
+NautilusWindow .pane-separator {
+    background-color: shade(@theme_bg_color, 1.0);
+}

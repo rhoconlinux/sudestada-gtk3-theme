@@ -1,0 +1,464 @@
+lazulum-theme (0.6.4.5-0ubuntu1~tista1) trusty; urgency=high
+
+  * Tuned Gedit appearance (2nd fix)
+  * Fixed Nautilus's column-headers on list-view
+   
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Sat, 18 Jan 2014 13:53:24 +0900
+
+lazulum-theme (0.6.4.4-0ubuntu1~tista1) trusty; urgency=high
+
+  * Re-designed GtkHeaderBar for fixing Gedit title
+   - Gedit now has GtkHeaderBar and needs more space to draw subtitle as file-path.
+   
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Thu, 16 Jan 2014 23:20:17 +0900
+
+lazulum-theme (0.6.4.3-0ubuntu1~tista1) trusty; urgency=high
+
+  * Added Ephy 'overlay-progressbar' design
+   - Today Ephy didn't overlay any progressbars within an entry area.
+   
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Mon, 13 Jan 2014 12:22:21 +0900
+
+lazulum-theme (0.6.4.2-0ubuntu1~tista1) trusty; urgency=high
+
+  * Starting 100 papaer-cut fixes (part.7)
+   - Reverted bold font face on info-bar instead of titles
+   - Fixed active state appearance on Ephy's toolbar entry
+   - Fixed round corner of nautilus's canvas-items in both
+     desktop-mode and window-mode
+   - Added cursor-handle theming
+   
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Mon, 13 Jan 2014 01:19:57 +0900
+
+lazulum-theme (0.6.4.1-0ubuntu1~tista1) trusty; urgency=high
+
+  * Starting 100 papaer-cut fixes (part.6)
+   - Fixed typo in info-bar text
+   - Added text-shadow for GtkDialog
+   - Added backdrop state for cell and rows
+   
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Fri, 10 Jan 2014 22:34:06 +0900
+
+lazulum-theme (0.6.4-0ubuntu1~tista1) trusty; urgency=high
+
+  * Bump version to 0.6.4
+   - Set darkder text for info-bar
+   - Added gedit theming
+   
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Fri, 10 Jan 2014 22:34:06 +0900
+
+lazulum-theme (0.6.3.99-0ubuntu1~tista1) trusty; urgency=high
+
+  * Starting 100 papaer-cut fixes (part.5 - preVersion 0.6.4)
+   - Set more shallower borders for row and treeview
+   - Fixed wrong rounded borders in nautilus's trash-bar (metacity)
+   - Set infobar foreground appearance
+   
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Thu, 09 Jan 2014 12:10:44 +0900
+
+lazulum-theme (0.6.3.5-0ubuntu1~tista1) trusty; urgency=high
+
+  * Starting 100 papaer-cut fixes (part.4)
+   - Added backdrop state of treeeview
+   - Fixed rounded edge in search-bar (metacity)
+   - Fixed nautilus .view background-color
+   - Purged some unused codes
+   - Tuned header-bar's active button appearances much more
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Wed, 08 Jan 2014 22:38:04 +0900
+
+lazulum-theme (0.6.3.4-0ubuntu1~tista1) trusty; urgency=high
+
+  * Starting 100 papaer-cut fixes (part.3)
+   - Added insensitive state of toolbar-entry
+   - Added Evince theming
+   - Changed scrollbar-trough color on Nautilus sidebar
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Sun, 05 Jan 2014 01:14:02 +0900
+
+lazulum-theme (0.6.3.3-0ubuntu1~tista1) trusty; urgency=high
+
+  * Fixed the bug that transparency background avoids to draw background 
+    images on both gnome-shell/flashback sessions
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Sat, 04 Jan 2014 22:38:41 +0900
+
+lazulum-theme (0.6.3.2-0ubuntu1~tista2) trusty; urgency=low
+
+  * Re-upload: Set new GtkWindow background as transparency
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sat, 04 Jan 2014 00:30:10 +0900
+
+lazulum-theme (0.6.3.2-0ubuntu1~tista1) trusty; urgency=low
+
+  * Start 100 papaer-cut fixing
+    - Fixed tab's button 'pressed' appearance
+    - Fixed header-bar's button 'pressed' appearance
+    - Set new GtkWindow background as transparency
+    - Reset metacity color selection to 'absolute value' 
+        to avoid visual glitches in Mutter
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sat, 04 Jan 2014 00:24:27 +0900
+
+lazulum-theme (0.6.3.1-0ubuntu1~tista1) trusty; urgency=low
+
+  * Start 100 papaer-cut fixing
+    - Set more lighter gradient for header-bar/titlebar
+    - Set more lighter gradient for active-tab
+    - Removed hover borders from tab close-button
+    - Tuned "anti-transparent box-shadow" again
+    - Some codes cleaned-up
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Thu, 02 Jan 2014 22:29:04 +0900
+
+lazulum-theme (0.6.3-0ubuntu1~tista1) trusty; urgency=low
+
+  * Bump version to 0.6.3
+    - Almost balanced compositing window-borders within mutter/metacity
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Thu, 02 Jan 2014 12:53:19 +0900
+
+lazulum-theme (0.6.2.2-0ubuntu1~tista1) trusty; urgency=low
+
+  * Bump version to 0.6.2.2
+    - Removed toolbar button/raised-button shadow completely
+    - A bit tighter header-bar height
+    - Ephy 2nd fix trail
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Thu, 02 Jan 2014 10:14:23 +0900
+
+lazulum-theme (0.6.2.1-0ubuntu1~tista1) trusty; urgency=low
+
+  * Bump version to 0.6.2.1
+    - Removed titlebar bottom border from nautilus
+    - Set horiz.separator space in menuitem
+    - Cleanup Contacts codes
+    - Added combobox arrow scaling
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Wed, 01 Jan 2014 19:40:31 +0900
+
+lazulum-theme (0.6.2-0ubuntu1~tista1) trusty; urgency=high
+
+  * Bump version to 0.6.2
+    - Tuned header-bar/titlebar gradient
+    - Fixed Ephy header-bar button appearances
+    - Reverted nautilus scrollbar trough from theme_base to theme_bg
+    - Added dirty fix for GtkHandleBox inside the Synaptic toolbar
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Wed, 01 Jan 2014 16:28:12 +0900
+
+lazulum-theme (0.6.1-0ubuntu1~tista1) trusty; urgency=high
+
+  * Bump version to 0.6.1
+    - Added Epiphany-browser theming
+    - Applied new designs for GtkHeaderbar and Titlebar
+    - Fixed nautilus search-bar buttons
+    - Changed inherit state of scrollbar to theme_bg colors (To fix the bug on ephy)
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Wed, 01 Jan 2014 13:47:58 +0900
+
+lazulum-theme (0.6.0.1-0ubuntu1~tista1) trusty; urgency=high
+
+  * Fixed menubar background
+  * Fixed tooltip appearance
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Tue, 31 Dec 2013 22:51:19 +0900
+
+lazulum-theme (0.6.0-0ubuntu1~tista1) trusty; urgency=high
+
+  * Bump major version to 0.6 series
+    - 1st trial for CSD in metacity session
+    - clean-up some toolbar buttons codes
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Tue, 31 Dec 2013 22:00:00 +0900
+
+lazulum-theme (0.5.5-0ubuntu1~tista1) trusty; urgency=high
+
+  * Bump version to 0.5.5
+    - Fix GtkComboBox appearance
+    - Rollback CSD button layout option
+    - Fix nautilus's search-bar background
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Sun, 29 Dec 2013 02:45:05 +0900
+
+lazulum-theme (0.5.4.1-0ubuntu1~tista1) trusty; urgency=high
+
+  * 2nd trial for scrollbars
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Sat, 28 Dec 2013 11:44:41 +0900
+
+lazulum-theme (0.5.4-0ubuntu1~tista1) trusty; urgency=high
+
+  * Bump version to 0.5.4
+    - New appearance for buttons on HeaderBar and ToolBar
+    - Some rollbacks were applied for metacity
+    - Clean-up some codes
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Wed, 25 Dec 2013 22:15:29 +0900
+
+lazulum-theme (0.5.3-0ubuntu1~tista1) trusty; urgency=high
+
+  * Bump version to 0.5.3
+    - New theming for GtkScrollbar
+    - Clean-up some codes
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Mon, 23 Dec 2013 12:33:58 +0900
+
+lazulum-theme (0.5.2-0ubuntu1~tista1) trusty; urgency=high
+
+  * 2nd fix for gnome-panel especially wnck window-list appearance.
+  * Decreased border width of metacity in case with client-side compositing 
+    applications like nautilus, gnome-tweak-tool, and so.
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Sun, 15 Dec 2013 12:33:07 +0900
+
+lazulum-theme (0.5.1-0ubuntu1~tista1) trusty; urgency=high
+
+  * Bumped version to 0.5.1
+  * Fixed some appearances in gnome-panel
+
+ -- Tista (Vostro-A90) <tista.gma500@gmail.com>  Sat, 14 Dec 2013 20:09:44 +0900
+
+lazulum-theme (0.5.0-0ubuntu1~tista1) trusty; urgency=high
+
+  * Fixed typo in metacity theming.
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sat, 14 Dec 2013 09:39:12 +0900
+
+lazulum-theme (0.4.3.2-0ubuntu1~tista1) trusty; urgency=high
+
+  * Fixed backdrop state on tab labels
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Mon, 04 Nov 2013 22:39:21 +0900
+
+lazulum-theme (0.4.3.1-0ubuntu1~tista1) trusty; urgency=high
+
+  * 2nd Fix for Gnome-Contacts/Gnome-tweak-tool
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Mon, 04 Nov 2013 12:40:08 +0900
+
+lazulum-theme (0.4.3-0ubuntu1~tista1) trusty; urgency=high
+
+  * Bumped version to 0.4.3
+  * Fixed entry-progressbar on toolbar colors
+  * Fixed some borders on GtkNotebook and GtkViewport
+  * Reverted appearances in Gnome-tweaks-tool's sidebar
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Mon, 04 Nov 2013 10:57:29 +0900
+
+lazulum-theme (0.4.2.2-0ubuntu1~tista1) trusty; urgency=high
+
+  * Added some new GtkTab appearances
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Mon, 04 Nov 2013 01:51:36 +0900
+
+lazulum-theme (0.4.2.1-0ubuntu1~tista1) trusty; urgency=high
+
+  * Got lighter borders in GtkNotebook
+  * Reverted GtkEntry focused color on GtkToolbar
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sun, 03 Nov 2013 23:33:06 +0900
+
+lazulum-theme (0.4.2-0ubuntu1~tista1) trusty; urgency=high
+
+  * First commit to trusty
+  * Bumped version to 0.4.2
+  * Fixed selected-button's border-shadows
+  * Fixed active-tab's border-shadows
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sat, 02 Nov 2013 15:37:20 +0900
+
+lazulum-theme (0.4.1-0ubuntu1~tista1) saucy; urgency=high
+
+  * Got more shallower high-lightened box-shadow on GtkNotebook.
+  * Fixed modal dialog's edge gradient.
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sun, 27 Oct 2013 22:14:54 +0900
+
+lazulum-theme (0.4.0-0ubuntu1~tista1) saucy; urgency=high
+
+  * Bumped version to 0.4.0.
+  * Fixed newer tweak-tool's appearances.
+  * Enlarged button sizes.
+  * Fixed some minor bugs.
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sun, 20 Oct 2013 19:37:39 +0900
+
+lazulum-theme (0.3.5-0ubuntu1~tista1) saucy; urgency=high
+
+  * Set new Sidebar design.
+  * Fixed typo.
+  * Added Sidebar backdrop states.
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sun, 13 Oct 2013 21:12:02 +0900
+
+lazulum-theme (0.3.4-0ubuntu1~tista1) saucy; urgency=high
+
+  * Reverted tab color gradient to previous.
+  * Added backdrop states for tab/switch/view.
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Mon, 07 Oct 2013 22:49:51 +0900
+
+lazulum-theme (0.3.3-0ubuntu1~tista1) saucy; urgency=high
+
+  * Applied new appearance in Toolbar and Tabs.
+  * Fixed gnome-contacts header-bar bugs.
+  * Fixed double-drawing notebook frame on Nautilus.
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sun, 06 Oct 2013 01:09:26 +0900
+
+lazulum-theme (0.3.2-0ubuntu1~tista1) saucy; urgency=high
+
+  * Added minimize button appearance for both metacity/mutter.
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Mon, 16 Sep 2013 01:01:51 +0900
+
+lazulum-theme (0.3.1-0ubuntu1~tista1) saucy; urgency=high
+
+  * Fixed GtkViewport's "black border".
+  * Fixed typo.
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sun, 15 Sep 2013 23:43:22 +0900
+
+lazulum-theme (0.3.0-0ubuntu1~tista1) saucy; urgency=high
+
+  * Bumped version to 0.3.0
+  * Changed development platform to Saucy.
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sat, 14 Sep 2013 11:28:09 +0900
+
+lazulum-theme (0.2.3-0ubuntu2~tista1) quantal; urgency=high
+
+  * Fixed lxpanel's "volume control" applet's background
+  * Added copyright to mutter theming to avoid crashes of mutter 3.9.x
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sun, 19 May 2013 18:26:13 +0900
+
+lazulum-theme (0.2.3-0ubuntu1~tista1) quantal; urgency=high
+
+  * Bumped version to 0.2.3
+  * Fixed gtk3 panel appearance for gnome-panel
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sun, 12 May 2013 13:15:22 +0900
+
+lazulum-theme (0.2.2-0ubuntu2~tista1) quantal; urgency=high
+
+  * Fixed typo in gtkrc/gtk2.
+  * Fixed gtk2 panel appearance for lxpanel.
+
+ -- Tista (VPCZ21AJ) <tista.gma500@gmail.com>  Sun, 12 May 2013 03:49:01 +0900
+
+lazulum-theme (0.2.2-0ubuntu1~tista1) quantal; urgency=high
+
+  * Fixed gtk2 appearances in 95%
+  * Bumped version to 0.2.2
+    - even though I've found some ugly glitches on gtk2-tooltips
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Sun, 05 May 2013 23:31:08 +0900
+
+lazulum-theme (0.2.1-0ubuntu1~tista1) quantal; urgency=high
+
+  * Fixed gtk2 appearances in 90%
+  * Bumped version to 0.2.1
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Sun, 05 May 2013 13:27:56 +0900
+
+lazulum-theme (0.2.0-0ubuntu2~tista1) quantal; urgency=high
+
+  * Fixed Tab appearances.
+  * Fixed GtkEntry appearances.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Sat, 04 May 2013 16:53:49 +0900
+
+lazulum-theme (0.2.0-0ubuntu1~tista1) quantal; urgency=high
+
+  * Bump version to 0.2.0.
+  * Started gtk2 theming.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Sat, 04 May 2013 15:47:23 +0900
+
+lazulum-theme (0.1.5-0ubuntu1~tista1) quantal; urgency=high
+
+  * Added classical metacity theming support.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Mon, 29 Apr 2013 13:13:44 +0900
+
+lazulum-theme (0.1.4-0ubuntu4~tista1) quantal; urgency=high
+
+  * Removed top/bottom borders on GtkMenu 
+     to be caused Wingpanel's ugly appearance.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Sat, 24 Nov 2012 19:16:12 +0900
+
+lazulum-theme (0.1.4-0ubuntu3~tista1) quantal; urgency=high
+
+  * Made GtkSwitch slider smaller.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Sat, 24 Nov 2012 12:45:57 +0900
+
+lazulum-theme (0.1.4-0ubuntu2~tista1) quantal; urgency=high
+
+  * Fixed Nautilus's notebook tab color.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Wed, 21 Nov 2012 19:43:09 +0900
+
+lazulum-theme (0.1.4-0ubuntu1~tista1) quantal; urgency=high
+
+  * Bumped version to 0.1.4.
+   - Fixed manuitem's hover design.
+   - Fixed viewport look.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Tue, 20 Nov 2012 22:05:48 +0900
+
+lazulum-theme (0.1.3-0ubuntu2~tista1) quantal; urgency=high
+
+  * Added new resize-grip icon.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Tue, 20 Nov 2012 00:14:31 +0900
+
+lazulum-theme (0.1.3-0ubuntu1~tista1) quantal; urgency=high
+
+  * Changed Tab appearances.
+  * Bumped version to 0.1.3.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Mon, 19 Nov 2012 23:04:18 +0900
+
+lazulum-theme (0.1.2-0ubuntu2~tista1) quantal; urgency=high
+
+  * Fixed Check/Radio buttons appearance on GtkMenuitem.
+  * Purged some unused images and clean-up.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Sat, 17 Nov 2012 22:36:41 +0900
+
+lazulum-theme (0.1.2-0ubuntu1~tista1) quantal; urgency=high
+
+  * Applied GtkCheck/RadioButton appearance.
+  * Stopped using images on check/radio.
+  * Changed tooltip opacity.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Sat, 17 Nov 2012 22:00:09 +0900
+
+lazulum-theme (0.1.1-0ubuntu1~tista1) quantal; urgency=high
+
+  * Applied GtkScrollbar appearance.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Fri, 16 Nov 2012 19:52:27 +0900
+
+lazulum-theme (0.1.0-0ubuntu1~tista3) quantal; urgency=high
+
+  * Replaced mutter theme.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Thu, 15 Nov 2012 22:23:00 +0900
+
+lazulum-theme (0.1.0-0ubuntu1~tista2) quantal; urgency=high
+
+  * Fixed some "theme persing errors".
+  * Applied GtkProgressBar and GtkSlace appearances.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Thu, 15 Nov 2012 20:51:00 +0900
+
+lazulum-theme (0.1.0-0ubuntu1~tista1) quantal; urgency=high
+
+  * Initial release.
+
+ -- Tista (VPCZ21AJ) <hyro5239@i-ml.com>  Wed, 14 Nov 2012 21:06:00 +0900

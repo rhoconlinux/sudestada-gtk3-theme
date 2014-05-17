@@ -1,0 +1,13 @@
+Source: lazulum-theme
+Section: gnome
+Priority: optional
+Maintainer: Tista <hyro5239@i-ml.com>
+Standards-Version: 3.9.3
+Build-Depends: debhelper (>= 7.0.8)
+
+Package: lazulum-theme
+Architecture: all
+Depends: gtk2-engines-murrine, gtk2-engines-pixbuf
+Suggests: elementary-icon-theme
+Description: Lazulum is a clean GTK theme.
+ Supports both GTK+ versions 2, 3, and Metacity.

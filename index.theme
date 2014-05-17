@@ -1,0 +1,11 @@
+[X-GNOME-Metatheme]
+Type=X-GNOME-Metatheme
+Name=lazulum-theme
+Comment=a clean gtk theme.
+Encoding=UTF-8
+Name[en_US]=lazulum-theme
+GtkTheme=lazulum
+MetacityTheme=lazulum
+IconTheme=Faience-Azur
+CursorTheme=DMZ-Black
+ButtonLayout=close:maximize

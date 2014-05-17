@@ -1,0 +1,943 @@
+/***********************
+ * Fallback Mode Panel *
+ ***********************/
+
+PanelWidget :backdrop,
+PanelApplet :backdrop,
+PanelToplevel :backdrop,
+PanelWidget,
+PanelApplet,
+PanelToplevel,
+.gnome-panel-menu-bar {
+    background-image: none;
+    background-color: @dark_bg_color;
+    padding: 0;
+    border-width: 0;
+    box-shadow: none;
+
+    color: @dark_fg_color;
+    text-shadow: none;
+    icon-shadow: none;
+}
+
+
+PanelSeparator:backdrop,
+PanelSeparator {
+    border-width: 0;
+    padding: 7px;
+    box-shadow: none;
+
+    background-image: none;
+    background-color: @transparent;
+    color: @dark_fg_color;
+}
+
+.gnome-panel-menu-bar.menubar,
+PanelApplet > GtkMenuBar.menubar,
+PanelMenuBar.menubar {
+    border-width: 0;
+    box-shadow: none;
+
+    -PanelMenuBar-icon-visible: false;
+
+    text-shadow: none;
+    icon-shadow: none;
+}
+
+.gnome-panel-menu-bar.menubar .menuitem,
+PanelApplet > GtkMenuBar.menubar .menuitem,
+PanelMenuBar.menubar .menuitem,
+.gnome-panel-menu-bar.menubar .menuitem:active,
+PanelApplet > GtkMenuBar.menubar .menuitem:active,
+PanelMenuBar.menubar .menuitem:active,
+.gnome-panel-menu-bar.menubar .menuitem:active:hover,
+PanelApplet > GtkMenuBar.menubar .menuitem:active:hover,
+PanelMenuBar.menubar .menuitem:active:hover,
+.gnome-panel-menu-bar.menubar .menuitem:hover,
+PanelApplet > GtkMenuBar.menubar .menuitem:hover,
+PanelMenuBar.menubar .menuitem:hover {
+    color: @dark_fg_color;
+    background-image: none;
+    background-color: transparent;
+    border-width: 0;
+    box-shadow: none;
+
+    font: bold;
+    text-shadow: none;
+    icon-shadow: none;
+}
+
+.gnome-panel-menu-bar.menubar .menu .menuitem,
+PanelApplet > GtkMenuBar.menubar .menu .menuitem,
+PanelMenuBar.menubar .menu  .menuitem {
+    color: @theme_fg_color;
+    background-color: shade(@theme_base_color, 1.05);
+    border-radius: 0;
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    padding: 3px 2px 3px 2px;
+
+    font: regular;
+    text-shadow: 0 1px @light_shadow;
+    icon-shadow: 0 1px @light_shadow;
+}
+
+.gnome-panel-menu-bar.menubar .menu .menuitem:hover,
+PanelApplet > GtkMenuBar.menubar .menu .menuitem:hover {
+    color: @theme_selected_fg_color;
+    background-color: transparent;
+    background-image: -gtk-gradient(
+    	linear,
+	left top,
+	left bottom,
+        from (shade(@theme_selected_bg_color, 1.05)),
+	color-stop (0.6, shade(@theme_base_color, 1.01)),
+        to (shade(@theme_base_color, 1.07)));
+
+    border-radius: 0;
+    border-width: 1px 0 1px 0;
+    border-top-color: alpha(@light_shadow, 0.8);
+    border-bottom-color: @light_shadow;
+    border-style: solid;
+
+    box-shadow: inset 0 1px shade(@theme_selected_bg_color, 0.9),
+                inset 0 -1px alpha(@dark_shadow, 0.1);
+}
+
+.gnome-panel-menu-bar .menu .menuitem GtkImage:hover,
+PanelApplet > GtkMenuBar .menu .menuitem GtkImage:hover {
+    background-image: none;
+    border: none;
+}
+
+PanelAppletFrame {
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+
+    border-width: 0;
+}
+
+PanelApplet .button:backdrop,
+PanelApplet .button {
+    -GtkButton-inner-border: 2;
+
+    color: @dark_fg_color;
+    background-image: none;
+    background-color: transparent;
+    text-shadow: none;
+    icon-shadow: none;
+
+    border-width: 0;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+PanelApplet .button:hover:active:backdrop,
+PanelApplet .button:active:backdrop,
+PanelApplet .button:hover:active,
+PanelApplet .button:active {
+    color: @dark_selected_fg_color;
+    background-image: none;
+    background-color: transparent;
+    text-shadow: none;
+    icon-shadow: none;
+
+    border-radius: 0;
+    border-width: 0;
+    box-shadow: none;
+}
+
+PanelApplet .button:hover:backdrop,
+PanelApplet .button:hover {
+    color: @dark_selected_fg_color;
+    background-image: none;
+    background-color: transparent;
+    text-shadow: none;
+    icon-shadow: none;
+
+    border-radius: 0;
+    border-width: 0;
+    box-shadow: none;
+}
+
+ClockBox,
+ClockBox:backdrop,
+ClockBox:prelight,
+ClockBox:prelight:backdrop,
+ClockBox:hover,
+ClockBox:hover:backdrop,
+ClockBox:active,
+ClockBox:active:backdrop,
+ClockBox:active:prelight,
+ClockBox:active:prelight:backdrop {
+    color: @dark_fg_color;
+    background-color: transparent;
+
+    text-shadow: none;
+    icon-shadow: none;
+    font: bold;
+
+    border-radius: 0;
+    border-width: 0;
+    box-shadow: none;
+}
+
+WnckPager,
+WnckPager:backdrop,
+WnckTasklist,
+WnckTasklist:backdrop {
+    color: @dark_fg_color;
+    background-color: transparent;
+    text-shadow: none;
+    icon-shadow: none;
+
+    border-radius: 0;
+    border-width: 0;
+    box-shadow: none;
+}
+
+WnckTasklist:hover,
+WnckTasklist:hover:backdrop,
+WnckTasklist:hover:active:backdrop,
+WnckTasklist:active,
+WnckTasklist:active:backdrop {
+    color: @dark_selected_fg_color;
+}
+
+NaTrayApplet {
+    -NaTrayApplet-icon-padding: 6;
+    -NaTrayApplet-icon-size: 12;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************
+ * Terminal *
+ ************/
+TerminalScreen {
+    -TerminalScreen-background-darkness: 0.9;
+
+    background-color: @theme_bg_color;
+    color: @theme_fg_color;
+}
+
+TerminalWindow GtkNotebook.notebook {
+    border-bottom-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+}
+
+/******************
+ * Control center *
+ ******************/
+CcShellItemView.view {
+    background-color: @theme_bg_color;
+}
+
+/************
+ * Contacts *
+ ************/
+/* Line at top in contacts pane, similar to .documents-scrolledwin.frame */
+.contacts-spinner.frame {
+    border-width: 0;
+    border-style: solid;
+    border-image: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: inset 0 1px shade(@theme_bg_color, 0.88);
+}
+
+.contacts-left-header-bar {
+    border-right-width: 1px;
+    border-right-color: shade(@theme_bg_color, 0.94);
+    border-top-right-radius: 0;
+}
+
+.contacts-right-header-bar {
+    border-left-width: 0;
+    border-top-left-radius: 0;
+}
+
+/* Primary toolbar with no line at top to avoid conflicts with frame border */
+ContactsWindow .primary-toolbar.toolbar {
+    border-width: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+
+    background-image: none;
+    box-shadow: none;
+}
+
+
+
+
+/**************
+ * Tweak tool *
+ **************/
+/* the sidebar */
+.tweak-categories { /*main sidebar box*/
+    padding: 0px 0px 0px 0px;
+
+    background-image: -gtk-gradient( linear, left top, right top,
+
+        from (@theme_bg_color),
+	color-stop (0.99, shade(@theme_bg_color, 1.0)),
+        to (shade(@theme_bg_color,  1.0)));
+
+    border-width: 1px 0px 1px 0px;
+    border-color: @theme_bg_color;
+    box-shadow: inset 0 1px transparent;
+
+    color: @theme_fg_color;
+    text-shadow: 0 1px transparent;
+}
+
+.tweak-categories .separator { /*border de los items del menu de la side bar*/
+    border-width: 1px 0px 1px 1px;
+    border-color: transparent;
+}
+
+.tweak-categories:selected,
+.tweak-categories:active,
+.tweak-categories:hover {
+    color: @theme_selected_fg_color;
+    background-color: #f00;
+    padding: 0px 0px 0px 0px;
+
+}
+
+
+.tweak-category {
+    border-width: 1px 0 1px 0;
+    border-color: #D0F4FF;
+    box-shadow: none;
+        padding: 0px 0px 0px 0px;
+
+    }
+
+.tweak-category:hover {
+    color: @theme_fg_color;
+    text-shadow: 0 1px @hilight_shadow;
+    border-width: 2px 1px 1px 0;
+    border-color: alpha(#D0F4FF,0.8); /*transition effect on click*/
+    padding: 0px 0px 0px 0px;
+
+}
+
+
+
+
+.tweak-category:selected {
+
+    background-color: transparent;
+    background-image: -gtk-gradient( linear, left top, left bottom,
+                    from (shade(@theme_selected_bg_color, 1.03)),
+                        color-stop (0.15, shade(@theme_selected_bg_color, 1.07)),
+                    to (shade(@theme_selected_bg_color, 1.07)));
+
+    transition: 350ms ease-in-out;
+
+    color: @theme_selected_fg_color;
+
+    border-color: shade(@theme_selected_bg_color, 0.9);
+    border-radius: 0px;
+
+    border-radius: 0 15px 15px 0;
+
+    border-color: shade(@theme_selected_bg_color, 1.9);
+
+    border-width: 1px 1px 1px 0;
+    border-top-color: alpha(@light_shadow, 0.8);
+    border-bottom-color: @light_shadow;
+    border-style: solid;
+
+
+    box-shadow: inset 0 1px shade(@theme_selected_bg_color, 0.9),
+                inset 0 -0px 0px 1px alpha(@theme_selected_bg_color, 0.7);
+}
+
+
+
+/* the container and tweaks in a group */
+.tweak-group {
+    padding: 6px;
+    background-color: @theme_bg_color;
+        border-width: 0px 0px 0px 0px;
+}
+
+.tweak {
+    padding-top: 6px;
+    background-color: @theme_bg_color;
+        border-width: 0px 0px 0px 0px;
+    border-color: @theme_bg_color;
+}
+
+.tweak:hover,
+.tweak:hover:active,
+.tweak:active {
+    padding: 0px 0px 0px 0px;
+    border-color:red;
+        border-width: 0px; /*caja de selección de cada linea de la ventana central del tweak*/
+    border-style: solid;
+}
+
+.tweak-titlebar-right { /*borders titulo "Apariencia"*/
+    border-left-width: 0;
+    border-top-left-radius: 0;
+}
+
+.tweak-titlebar-left { /*borders titulo "Tweaks"*/
+    border-right-width: 0px;
+    border-right-color: shade(@theme_bg_color, 0.94);
+    border-top-right-radius: 0;
+}
+
+
+
+/*bu*/
+.tweak-group-white{
+    background-color: @theme_bg_color;
+    border-color:red;
+        border-width: 0px;
+    border-style: solid;
+}
+
+.tweak-white,
+.tweak-white:hover {
+    background-color: @theme_bg_color;
+}
+
+
+
+
+
+
+/************
+ * Epiphany *
+ ************/
+/* Ephy toolbar */
+EphyToolbar {
+    padding: 0;
+}
+
+EphyToolbar .entry:first-child,
+EphyToolbar .entry:focus:first-child,
+EphyToolbar .entry:backdrop:first-child {
+    border-right-width: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+EphyToolbar .entry:last-child,
+EphyToolbar .entry:focus:last-child,
+EphyToolbar .entry:backdrop:last-child {
+    border-left-width: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+EphyToolbar .location-entry .entry:first-child,
+EphyToolbar .location-entry .entry:backdrop:first-child {
+    background-image: -gtk-gradient( linear, left top, right top,
+        from (shade(@theme_bg_color, 0.92)),
+	color-stop (0.4, shade(@theme_bg_color, 0.97)),
+        to (shade(@theme_bg_color, 0.99)));
+
+    border-top-color: alpha(@light_shadow, 0.4);
+    border-right-color: alpha(@light_shadow, 0.2);
+    border-bottom-color: alpha(@light_shadow, 0.4);
+    border-left-color: alpha(@light_shadow, 0.2);
+}
+
+EphyToolbar .location-entry .entry:focus:first-child {
+    background-image: -gtk-gradient(
+    	linear,
+	left top,
+	left bottom,
+        from (shade(@theme_selected_bg_color, 1.05)),
+	color-stop (0.6, shade(@theme_bg_color, 0.98)),
+        to (shade(@theme_bg_color, 1.00)));
+
+    border-top-color: alpha(@light_shadow, 0.4);
+    border-right-color: alpha(@light_shadow, 0.2);
+    border-bottom-color: alpha(@light_shadow, 0.4);
+    border-left-color: alpha(@light_shadow, 0.2);
+
+    box-shadow: inset 1px 0 alpha(@theme_selected_bg_color, 0.6),
+                inset 0 1px shade(@theme_selected_bg_color, 0.9),
+                inset -1px 0 alpha(@theme_selected_bg_color, 0.6),
+                inset 0 -1px transparent;
+}
+
+EphyToolbar .location-entry .entry:backdrop:first-child,
+EphyToolbar .location-entry .entry:insensitive:first-child {
+    color: mix(@theme_fg_color, @theme_bg_color, 0.6);
+}
+
+EphyToolbar .location-entry .button:last-child,
+EphyToolbar .location-entry .button:focus:last-child,
+EphyToolbar .location-entry .button:backdrop:last-child {
+    border-width: 1px;
+    border-left-width: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    padding-left: 4px;
+    padding-right: 4px;
+
+    color: @theme_text_color;
+    text-shadow: 0 1px @light_shadow;
+    background-image: -gtk-gradient(
+    	linear,
+	left top,
+	left bottom,
+        from (shade(@theme_bg_color, 1.01)),
+        to (shade(@theme_bg_color, 0.99)));
+
+    border-top-color: alpha(@light_shadow, 0.4);
+    border-right-color: alpha(@light_shadow, 0.2);
+    border-bottom-color: alpha(@light_shadow, 0.6);
+    border-style: solid;
+
+    box-shadow: inset 1px 0 alpha(@light_shadow, 0.2),
+                inset 0 1px alpha(@dark_shadow, 0.2),
+                inset -1px 0 alpha(@dark_shadow, 0.1),
+		inset 0 -1px transparent;
+}
+
+EphyToolbar .location-entry .button:last-child:hover,
+EphyToolbar .location-entry .button:focus:last-child:hover,
+EphyToolbar .location-entry .button:backdrop:last-child:hover {
+    background-image: -gtk-gradient(
+    	linear,
+	left top,
+	left bottom,
+        from (shade(@theme_bg_color, 0.94)),
+	color-stop (0.4, @theme_bg_color),
+        to (shade(@theme_bg_color, 1.01)));
+
+    border-top-color: alpha(@light_shadow, 0.4);
+    border-right-color: alpha(@light_shadow, 0.2);
+    border-bottom-color: alpha(@light_shadow, 0.6);
+
+    box-shadow: inset 1px 0 transparent,
+                inset 0 1px alpha(@dark_shadow, 0.2),
+                inset -1px 0 alpha(@dark_shadow, 0.1),
+                inset 0 -1px transparent;
+}
+
+EphyToolbar .location-entry .button:last-child:active,
+EphyToolbar .location-entry .button:focus:last-child:active,
+EphyToolbar .location-entry .button:backdrop:last-child:active {
+    color: @theme_selected_fg_color;
+
+    background-image: -gtk-gradient(
+    	linear,
+	left top,
+	left bottom,
+        from (shade(@theme_selected_bg_color, 1.05)),
+	color-stop (0.6, shade(@theme_bg_color, 0.98)),
+        to (shade(@theme_bg_color, 1.01)));
+
+    border-top-color: alpha(@light_shadow, 0.4);
+    border-right-color: alpha(@light_shadow, 0.2);
+    border-bottom-color: alpha(@light_shadow, 0.6);
+
+    box-shadow: inset 1px 0 transparent,
+                inset 0 1px shade(@theme_selected_bg_color, 0.88),
+                inset -1px 0 alpha(@dark_shadow, 0.1),
+                inset 0 -1px transparent;
+}
+
+EphyToolbar .location-entry .button:last-child:insensitive,
+EphyToolbar .location-entry .button:focus:last-child:insensitive,
+EphyToolbar .location-entry .button:backdrop:last-child:insensitive {
+    background-image: none;
+
+    border-top-color: alpha(@light_shadow, 0.4);
+    border-right-color: alpha(@light_shadow, 0.2);
+    border-bottom-color: alpha(@light_shadow, 0.6);
+
+    box-shadow: inset 1px 0 alpha(@dark_shadow, 0.05),
+                inset 0 1px alpha(@dark_shadow, 0.1),
+                inset -1px 0 alpha(@dark_shadow, 0.05),
+		inset 0 -1px transparent;
+}
+
+EphyToolbar .button,
+EphyToolbar .raised.button,
+EphyToolbar .raised .button {
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+    border-radius: 3px 3px 0 0;
+    border-width: 1px;
+
+    padding-left: 4px;
+    padding-right: 4px;
+
+    box-shadow: none;
+}
+
+EphyToolbar .button:hover,
+EphyToolbar .raised.button:hover,
+EphyToolbar .raised .button:hover {
+    background-color: transparent;
+    background-image: none;
+    border-color: transparent;
+    color: @theme_selected_fg_color;
+
+    text-shadow: 0 1px @hilight_shadow;
+    icon-shadow: 0 0 @dark_shadow;
+    box-shadow: none;
+}
+
+/* Ephy overlay-progressbar */
+EphyNotebook .progressbar,
+EphyWindow .progressbar {
+    -GtkProgressBar-min-horizontal-bar-height: 5;
+    padding: 0;
+
+    background-color: shade(@theme_selected_bg_color, 0.92);
+    background-image: none;
+
+    border-top-width: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+    border-bottom-width: 4px;
+    border-radius: 0;
+    border-color: transparent;
+
+    box-shadow: none;
+}
+
+EphyNotebook .trough,
+EphyWindow .trough {
+    padding: 0;
+
+    background-image: none;
+    border: none;
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+/* Ephy notebook/tab/frame */
+EphyNotebook.notebook,
+EphyNotebook.notebook tab {
+    border-width: 1px;
+}
+
+EphyNotebook.notebook tab:active {
+    background-color: @theme_bg_color;
+}
+
+EphyNotebook.notebook,
+EphyNotebook.notebook tab,
+EphyOverview GtkScrolledWindow,
+EphyWindow.background {
+    background-color: @theme_bg_color;
+}
+
+/* removes any border from the overview scrolled window, since it's overlaid */
+EphyWindow.background EphyEmbed.vertical EphyOverview .documents-scrolledwin {
+    border: none;
+}
+
+/* remove top and bottom borders from the main scrolled window when inside a notebook tab */
+EphyWindow.background EphyNotebook.notebook EphyEmbed.vertical GtkScrolledWindow {
+    border-top-width: 0;
+    border-bottom-width: 0;
+}
+
+/* remove bottom borders from the  main scrolled window when no bars at the bottom of the screen are shown */
+EphyWindow.background EphyEmbed.vertical GtkScrolledWindow,
+EphyWindow.background  {
+    border-bottom-width: 0;
+}
+
+EphyNotebook.notebook GtkScrolledWindow {
+    border-width: 1px;
+    border-color: alpha(@dark_shadow, 0.2);
+}
+
+
+/**********
+ * Evince *
+ **********/
+EvWindow.background > GtkBox.vertical > GtkPaned.horizontal > GtkBox.vertical > GtkScrolledWindow.frame {
+    border-width: 0;
+    border-radius: 0;
+}
+
+EvWindow.background EvSidebar.vertical .frame {
+    border-width: 1px 1px 0 0;
+    border-radius: 0;
+}
+
+EvWindow.background EvSidebar.vertical .notebook {
+    border-width: 1px 0 0;
+}
+
+EvWindow.background EvSidebarAnnotations.vertical GtkToolPalette > GtkToolItemGroup > .button {
+    border-image: none;
+    border-radius: 0;
+    border-style: solid;
+    border-width: 0 0 1px;
+}
+
+EvWindow.background EvSidebar.vertical .notebook .frame {
+    border-width: 0;
+}
+
+EvWindow.background EggFindBar.toolbar {
+    border-width: 1px 0 0;
+    border-style: solid;
+}
+
+EvWindow .primary-toolbar .entry:last-child:insensitive,
+EvWindow .toolbar .entry:last-child:insensitive {
+    border-left-width: 0;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+
+    box-shadow: inset 1px 0 alpha(@light_shadow, 0.2),
+    	        inset 0 1px alpha(@dark_shadow, 0.1),
+                inset -1px 0 alpha(@dark_shadow, 0.05),
+		inset 0 -1px transparent;
+}
+
+
+
+
+
+
+/*********
+ * Gedit *
+ *********/
+GeditWindow * {
+    -GtkPaned-handle-size: 0;
+}
+
+GeditWindow .pane-separator,
+GeditWindow .pane-separator:hover {
+    background-color: @theme_bg_color;
+    color: transparent;
+    border: none;
+}
+
+GeditPanel.vertical .title {
+    border-style: solid;
+    padding: 11px 10px;
+    border-width: 0 0 1px 0;
+}
+
+GeditWindow *.notebook .view {
+    background-color: @theme_bg_color;
+}
+
+GeditWindow GtkTreeView .trough {
+
+}
+
+GeditWindow *.toolbar {
+    background-image: -gtk-gradient(
+    	linear,
+	left top,
+	left bottom,
+        from (@theme_bg_color),
+        to (shade(@theme_bg_color, 1.05)));
+
+    padding: 1px;
+    border-radius: 0;
+
+    box-shadow: inset 1px 0 alpha(@light_shadow, 0.4),
+                inset 0 1px transparent,
+                inset -1px 0 alpha(@light_shadow, 0.4),
+		inset 0 -1px @light_shadow;
+
+    border-width: 0 0 1px 0;
+    border-radius: 0;
+    border-bottom-color: shade(@theme_bg_color, 0.88);
+}
+
+GeditDocumentsPanel .view,
+GeditDocumentsPanel .view:backdrop {
+    background-color: @theme_bg_color;
+}
+
+GeditPanel.vertical .notebook,
+GeditPanel.vertical .notebook:backdrop {
+    background-color: @theme_bg_color;
+    border-width: 0 0 1px 0;
+}
+
+GeditPanel.vertical .notebook tab {
+    padding: 3px;
+}
+
+GeditPanel.vertical .notebook tab:active {
+}
+
+GeditPanel.horizontal .notebook,
+GeditPanel.horizontal .notebook:backdrop {
+    background-color: @theme_bg_color;
+    border-width: 0 1px 1px 0px;
+}
+
+GeditPanel.horizontal .notebook tab {
+    padding: 1px;
+}
+
+GeditPanel.horizontal .notebook tab:active {
+
+}
+
+GeditWindow *.notebook {
+    border-width: 1px;
+}
+
+GeditWindow *.notebook tab {
+    background-image: -gtk-gradient( linear, left top, left bottom,
+
+        from (@theme_bg_color),
+        to (shade(@theme_bg_color, 1.05)));
+
+    padding: 3px;
+    border-radius: 0;
+
+    box-shadow: inset 1px 0 alpha(@light_shadow, 0.4),
+                inset 0 1px transparent,
+                inset -1px 0 alpha(@light_shadow, 0.4),
+		inset 0 -1px @light_shadow;
+}
+
+GeditWindow *.notebook tab:active {
+    background-image: -gtk-gradient( linear, left bottom, left top,
+
+        from (shade(@theme_bg_color, 1.0)),
+	color-stop (0.6, shade(@theme_bg_color, 0.98)),
+        to (shade(@theme_bg_color, 0.98)));
+
+    padding: 3px;
+    border-width: 1px;
+    border-radius: 3px 3px 0 0;
+    border-top-color: shade(@theme_selected_bg_color, 0.9);
+    border-right-color: alpha(@dark_shadow, 0.1);
+    border-bottom-color: @theme_base_color;
+    border-left-color: alpha(@dark_shadow, 0.1);
+
+    box-shadow: inset 1px 0 alpha(@theme_selected_bg_color, 0.2),
+                inset 0 1px alpha(@theme_selected_bg_color, 0.4),
+                inset -1px 0 alpha(@theme_selected_bg_color, 0.2);
+}
+
+GeditStatusbar GeditSmallButton,
+GeditStatusMenuButton {
+    text-shadow: none;
+}
+
+GeditViewFrame .gedit-search-slider {
+    background-color: @theme_base_color;
+    background-image: -gtk-gradient( linear, left top, right top,
+
+        from (@theme_base_color),
+        to (shade(@theme_bg_color, 1.01)));
+
+    padding: 6px;
+    border-color: alpha(@dark_shadow, 0.1);
+    border-radius: 0 0 3px 3px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+
+    box-shadow: inset 1px 0 alpha(@light_shadow, 0.2),
+                inset 0 1px transparent,
+                inset -1px 0 alpha(@light_shadow, 0.2),
+		inset 0 -1px @light_shadow;
+}
+
+GeditViewFrame .gedit-search-slider .not-found {
+    background-image: none;
+}
+
+GeditViewFrame .gedit-search-slider .not-found:selected {
+    background-color: @theme_selected_bg_color;
+    color: @theme_selected_fg_color;
+}
+
+.gedit-search-entry-occurrences-tag {
+    color: @theme_text_color;
+    margin: 2px;
+    padding: 2px;
+}
+
+.gedit-titlebar-left:dir(ltr),
+.gedit-titlebar-right:dir(rtl) {
+    border-top-right-radius: 0;
+    border-right-width: 0;
+}
+
+.gedit-titlebar-right:dir(ltr),
+.gedit-titlebar-left:dir(rtl) {
+    border-top-left-radius: 0;
+    border-left-width: 0;
+}
+
+.gedit-headerbar-paned.pane-separator:dir(ltr),
+.gedit-headerbar-paned.pane-separator:hover:dir(ltr),
+.gedit-sidepanel-paned.pane-separator:dir(ltr),
+.gedit-sidepanel-paned.pane-separator:hover:dir(ltr) {
+    border-radius: 0;
+    /* border-width: 0; */
+    border-width: 1px 0 0 0;
+    border-top-color: shade(@theme_bg_color, 0.88);
+}
+
+.gedit-headerbar-paned.pane-separator:dir(rtl),
+.gedit-headerbar-paned.pane-separator:hover:dir(rtl),
+.gedit-sidepanel-paned.pane-separator:dir(rtl),
+.gedit-sidepanel-paned.pane-separator:hover:dir(rtl) {
+    border-radius: 0;
+    /* border-width: 0; */
+    border-width: 1px 0 0 0;
+    border-top-color: shade(@theme_bg_color, 0.88);
+}
