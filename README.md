@@ -1,4 +1,5 @@
-sudestada-gtk3-theme .flag {
+sudestada-gtk3-theme 
+.flag {
 	width: 16px;
 	height: 11px;
 	background:url(flags.png) no-repeat
